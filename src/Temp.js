@@ -18,7 +18,7 @@ const styleHot = {
   let answer
   if (state < 10) {
     answer = <p style={styleCold}>
-      I's cold, brrr <span>❄️</span>
+      It's cold, brrr <span>❄️</span>
     </p>
   }
   else if (state >= 10 && state <= 30) {
@@ -28,7 +28,7 @@ const styleHot = {
   }
   else if (state > 30){
      answer = <p style={styleHot}>
-      It's nice <span> ☀️ </span>
+      It's HOT <span> ☀️ </span>
     </p>
   }
   return (

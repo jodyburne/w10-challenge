@@ -16,7 +16,7 @@ if (e.target.type === 'text')
     <div>
       <h1>Custo im</h1>
 <input type='text' onChange={update} value={url}/> <br/>
-<input type='range' onChange={update} value={size} min='0' max='200'/> 
+<input type='range' onChange={update} value={size} min='0' max='300'/> 
 
   {size &&
     <p> {size} x {size} px </p>
@@ -24,7 +24,7 @@ if (e.target.type === 'text')
   <br/>
 
   {url &&
-  <img src={url} height={size} width={size} alt=''/>
+  <img src={url} style={{objectFit: 'cover'}}height={size} width={size} alt=''/>
   }
 
     </div>
