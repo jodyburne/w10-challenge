@@ -1,13 +1,58 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ font-family: 'Lato', sans-serif;
+
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.celeb-list {
+  text-align: center;
+  width: 30vw;
+}
+
+.celeb-page {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around
+}
+
+.celeb-detail {
+  width: 60vw
+}
+
+nav {
+  background-color: red;
+  height: 10vh;
+  display: flex;  
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > * {
+  text-decoration: none;
+  color: white;
+}
+
+nav > *:hover {
+  color: cyan
+}
+
+img {
+  border-radius: 5px;
+  border: 2px solid rgba(255, 0, 0, 0.5)
+}
+
+.links:hover {
+  color: cyan
+}
+
+.links {
+  color: rgba(255, 0, 0, 0.5)
 }

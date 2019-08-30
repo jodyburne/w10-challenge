@@ -18,31 +18,44 @@ function Celebrities(){
        console.log(c)
        setSelected(c)
    }
+
+   let cyanStyle = {
+       color: 'cyan'
+   }
+
     return (
         <div>
-        <h1>Most Popular Actors</h1>
+        <h1 style={cyanStyle}>Most Popular Actors</h1>
+        <div className='celeb-page'>
+            <div className='celeb-list'>
         {celebs.map(celeb => (
-            <div key={celeb.id}>
-        <h3>{celeb.name}</h3>
-        <img src={`https://image.tmdb.org/t/p/w185${celeb.profile_path}`}
-        alt=''
-        onClick={() => select(celeb)}
-        />
-        </div>
+        <h3 className='links' key={celeb.id} onClick={() => select(celeb)}>{celeb.name}</h3>
 
         ))}
+        </div>
         {selected && (
+         <div style={cyanStyle} className='celeb-detail'>
          <div>
-         <h3>Popularity Score: {selected.popularity}</h3>
+         <h2 >{selected.name}</h2>
+        <h3 >Popularity Score: {selected.popularity}</h3>
+         <img src={`https://image.tmdb.org/t/p/w185${selected.profile_path}`}
+        alt=''
+        />
+        </div>
         {selected.known_for.length > 0 && (
-            selected.known_for.map(film => (
-                <div key={film.id}>
+            <div>
                 <h3>Greatest hits</h3>
-                <p>{film.original_title}</p>
+            <div className='celeb-page'>
+            {selected.known_for.map(film => (
+                <div >
+                <p key={film.id}>{film.original_title}</p>
                 <img src={`https://image.tmdb.org/t/p/w185${film.poster_path}`}
                  alt=''/>
                  </div>
-            ))
+            ))}
+            </div>
+           </div>
+
         )
         }
         
@@ -50,6 +63,7 @@ function Celebrities(){
          </div>
         )
         }
+        </div>
         </div>
     )
 }

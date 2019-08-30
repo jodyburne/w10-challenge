@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
     <nav>
-        <Link to="/">Home</Link>
+        <Link className='stop'to="/">Home</Link>
         <Link to="/temperature">Temperature</Link>
         <Link to="/customize-image">Customize Image</Link>
         <Link to="/celebrities">Celebrities</Link>
